@@ -64,7 +64,7 @@ const timer = {
       if (deltaTime <= 0) {
         clearInterval(timerInterval);
         timerInterval = null; // Скидаємо змінну після завершення таймера
-        updateTimer({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        
         // Розблоковуємо інпут і кнопку після закінчення таймера
         refs.datetimePicker.disabled = false;
         refs.startBtn.disabled = false;

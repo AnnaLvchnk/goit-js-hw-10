@@ -46,13 +46,40 @@ fieldset {
 }
 
 .delay-form {
-  width: 272px;
+  width: 360px;
+  height: 36px;
+  border-radius: 4px;
+  border: 2px solid #746e6e35;
 }
 
 .form {
   width: 400px;
-  border: 2px solid #808080;
+  border: 2px solid rgba(0, 0, 0, 0.364);
+  border-radius: 4px;
   padding: 20px;
+  background-color: #fff;
+}
+
+.fieldset-form{
+  width: 360px;
+  height: 72px;
+  border-radius: 4px;
+  border: 2px solid #746e6e35;
+}
+.btn-create {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+  border: none;
+  color: white;
+}
+
+.btn-create:hover,
+.btn-create:focus {
+  background-color: #404BBF;
+  color: #fff;
 }
 
 .nav {
