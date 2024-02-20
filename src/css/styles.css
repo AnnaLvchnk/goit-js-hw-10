@@ -114,67 +114,86 @@ fieldset {
   margin-bottom: 32px;
 }
 
-.value {
+.datetime-input {
+  width: 280px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #808080;
   color: #2e2f42;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.2;
-  /* 120% */
-  letter-spacing: 1.6px;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.datetime-input:hover {
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.datetime-input:focus {
+  border-radius: 5px;
+  border: 1px solid #4e75ff;
+}
+
+.datetime-input.disabled {
+  color: #ffffff;
+  background-color: #b2b2b2;
+  border: 1px solid transparent;
+}
+
+.datetime-input.disabled:hover,
+.datetime-input.disabled:focus {
+  cursor: not-allowed;
+  border: 1px solid transparent;
+}
+
+.start-btn {
+  width: 75px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #0037fe;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0;
+}
+
+.start-btn:hover,
+.start-btn:focus {
+  background-color: #0037ff;
+}
+
+.start-btn.disabled {
+  color: #ffffff;
+  background-color: #b2b2b2;
+  cursor: not-allowed;
 }
 
 .timer {
   display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  text-align: center;
+  width: 390px;
+  height: 70px;
+  gap: 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
-  text-transform: uppercase;
 }
 
-.label {
-  color: #2e2f42;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  /* 150% */
-  padding: 8px 43px;
+.value {
+  color: #000000;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
 }
 
-.wrap {
-  margin-bottom: 32px;
-}
-
-.start-btn {
-  border-radius: 8px;
-  background: #4e75ff;
-  border: none;
-  width: 75px;
-  padding: 5px;
-}
-
-.start-btn:disabled {
-  background: #cfcfcf;
-}
-
-.start-btn:active {
-  background: #6c8cff;
-}
-
-.radio-btn {
-  color: #2e2f42;
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 8px 16px;
-}
-
-.input {
-  padding: 4px 5px;
-}

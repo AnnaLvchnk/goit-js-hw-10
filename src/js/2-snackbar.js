@@ -11,32 +11,30 @@ function createPromise(delay, state) {
     }
   });
 }
-
 // Вішаємо обробник на сабміт форми
-
 const form = document.querySelector('.form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   // Отримуємо значення з форми
-  const delay = parseInt(this.elements.delay.value);
-  const state = this.elements.state.value;
+  const delay = Number(this.elements.delay.value);
+  const state = this.state.value;
 
   // Створюємо проміс
   createPromise(delay, state)
-    .then(result => {
+    .then(value => {
       // Виконано вдало
       iziToast.success({
         title: 'Fulfilled',
-        message: `✅ Fulfilled promise in ${result}ms`,
+        message: `✅ Fulfilled promise in ${value}ms`,
         position: 'topRight',
       });
     })
-    .catch(result => {
+    .catch(error => {
       // Відхилено
       iziToast.error({
         title: 'Rejected',
-        message: `❌ Rejected promise in ${result}ms`,
+        message: `❌ Rejected promise in ${error}ms`,
         position: 'topRight',
       });
     });
